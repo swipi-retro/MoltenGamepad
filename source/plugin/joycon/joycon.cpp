@@ -299,25 +299,27 @@ void joycon::read_report(int index) {
       take_joycon_event(down,face_btns[1]);
       take_joycon_event(up,face_btns[2]);
       take_joycon_event(right,face_btns[3]);
-      take_joycon_event(l_sr,sr);
-      take_joycon_event(l_sl,sl);
+      //take_joycon_event(l_sr,sr);
+      //take_joycon_event(l_sl,sl);
       take_joycon_event(thumbl,stickclick);
       take_joycon_event(capture,capplus);
       take_joycon_event(minus,homeminus);
       take_joycon_event(l,lr);
-      take_joycon_event(zl,zlzr);
+      //take_joycon_event(zl,zlzr);
+	  take_joycon_event(solo_sl,zlzr);
     } else if (mode == PARTNERED && sides[index] == RIGHT_JOYCON) {
       take_joycon_event(a,face_btns[0]);
       take_joycon_event(x,face_btns[1]);
       take_joycon_event(b,face_btns[2]);
       take_joycon_event(y,face_btns[3]);
-      take_joycon_event(r_sr,sr);
-      take_joycon_event(r_sl,sl);
+      //take_joycon_event(r_sr,sr);
+      //take_joycon_event(r_sl,sl);
       take_joycon_event(thumbr,stickclick);
       take_joycon_event(plus,capplus);
       take_joycon_event(home,homeminus);
       take_joycon_event(r,lr);
-      take_joycon_event(zr,zlzr);
+      //take_joycon_event(zr,zlzr);
+	  take_joycon_event(solo_sr,zlzr);
     }
     methods.send_syn_report(ref);
   }
